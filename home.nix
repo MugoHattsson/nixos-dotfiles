@@ -32,6 +32,8 @@
     # '')
   ];
 
+  xdg.configFile."hypr/hyprland.conf".source = ./hyprland.conf;
+
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
   # plain files is through 'home.file'.
   home.file = {

@@ -83,6 +83,10 @@
         theme = "robbyrussell";
       };
     };
+
+    wofi = {
+      enable = true;
+    };
   };
 
   # Let Home Manager install and manage itself.

@@ -87,6 +87,10 @@
     wofi = {
       enable = true;
     };
+
+    firefox = {
+      enable = true;
+    };
   };
 
   # Let Home Manager install and manage itself.

@@ -63,7 +63,7 @@
   #  /etc/profiles/per-user/hugo/etc/profile.d/hm-session-vars.sh
   #
   home.sessionVariables = {
-    EDITOR = "vim";
+    #EDITOR = "vim";
   };
 
   programs = {
@@ -90,6 +90,15 @@
 
     firefox = {
       enable = true;
+    };
+
+    neovim = {
+      enable = true;
+      defaultEditor = true;
+
+      viAlias = true;
+      vimAlias = true;
+      vimdiffAlias = true;
     };
   };
 

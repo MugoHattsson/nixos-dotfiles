@@ -90,6 +90,15 @@
     #jack.enable = true;
   };
 
+  programs.light.enable = true;
+  services.actkbd = {
+    enable = true;
+    bindings = [
+      { keys = [ 224 ]; events = [ "key" ]; command = "/run/current-system/sw/bin/light -U 5"; }
+      { keys = [ 225 ]; events = [ "key" ]; command = "/run/current-system/sw/bin/light -A 5"; }
+    ];
+  };
+
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
@@ -97,6 +106,8 @@
     wget
     git
     kitty
+    spotify-player
+    libreoffice
   ];
 
   # Some programs need SUID wrappers, can be configured further or are

@@ -99,6 +99,26 @@
       viAlias = true;
       vimAlias = true;
       vimdiffAlias = true;
+
+      extraLuaConfig = ''
+        ${builtins.readFile ./nvim/options.lua}
+      '';
+
+      plugins = with pkgs.vimPlugins; [
+        {
+	  plugin = comment-nvim;
+	  type = "lua";
+	  config = "require(\"Comment\").setup()";
+	}
+
+	{
+	  plugin = gruvbox-nvim;
+	  config = "colorscheme gruvbox";
+	}
+
+	lualine-nvim
+
+      ];
     };
   };
 

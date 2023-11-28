@@ -68,7 +68,9 @@
 
   programs = {
     git = {
+      enable = true;
       userName = "MugoHattsson";
+      userEmail = "hu5174ma-s@student.lu.se";
     };
 
     bash = {

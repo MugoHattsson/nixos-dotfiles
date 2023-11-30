@@ -95,6 +95,13 @@
       enable = true;
     };
 
+    kitty = {
+      enable = true;
+      settings = {
+        font_size = 13;
+      };
+    };
+
     neovim = {
       enable = true;
       defaultEditor = true;

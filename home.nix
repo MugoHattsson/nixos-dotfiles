@@ -63,6 +63,8 @@
     #EDITOR = "vim";
   };
 
+  imports = [ ./waybar.nix ];
+
   programs = {
     git = {
       enable = true;
@@ -71,10 +73,6 @@
     };
 
     bash = {
-      enable = true;
-    };
-    
-    waybar = {
       enable = true;
     };
 

@@ -44,6 +44,7 @@
     LC_TIME = "sv_SE.UTF-8";
   };
 
+  # TODO update this according to 23.11
   # Configure keymap in X11
   services.xserver = {
     layout = "us";
@@ -109,6 +110,10 @@
     spotify-player
     libreoffice
     killall
+    tree
+
+    python3
+    virtualenv
   ];
 
   # Some programs need SUID wrappers, can be configured further or are

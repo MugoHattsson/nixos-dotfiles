@@ -1,5 +1,12 @@
 { config, pkgs, ... }:
-
+  let
+      myAliases = {
+        ga = "git add";
+        gcm = "git commit -m";
+        gd = "git diff";
+        gs = "git status";
+      };
+  in
 {
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
@@ -77,10 +84,12 @@
 
     bash = {
       enable = true;
+      shellAliases = myAliases;
     };
 
     zsh = {
       enable = true;
+      shellAliases = myAliases;
 
       oh-my-zsh = {
         enable = true;

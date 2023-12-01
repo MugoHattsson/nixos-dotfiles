@@ -63,7 +63,10 @@
     #EDITOR = "vim";
   };
 
-  imports = [ ./waybar.nix ];
+  imports = [ 
+    ./modules/gui
+    ./modules/tui
+  ];
 
   programs = {
     git = {
@@ -100,34 +103,6 @@
       };
     };
 
-    neovim = {
-      enable = true;
-      defaultEditor = true;
-
-      viAlias = true;
-      vimAlias = true;
-      vimdiffAlias = true;
-
-      extraLuaConfig = ''
-        ${builtins.readFile ./nvim/options.lua}
-      '';
-
-      plugins = with pkgs.vimPlugins; [
-        {
-	  plugin = comment-nvim;
-	  type = "lua";
-	  config = "require(\"Comment\").setup()";
-	}
-
-	{
-	  plugin = gruvbox-nvim;
-	  config = "colorscheme gruvbox";
-	}
-
-	lualine-nvim
-
-      ];
-    };
   };
 
   # Let Home Manager install and manage itself.

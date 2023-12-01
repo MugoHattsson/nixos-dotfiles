@@ -1,6 +1,7 @@
 {
   imports = [
     ./comment.nix
+    ./treesitter.nix
   ];
 
   programs.nixvim = {
@@ -9,10 +10,10 @@
     plugins = {
       gitsigns = {
         enable = true;
-	signs = {
-	  add.text = "+";
-	  change.text = "~";
-	};
+        signs = {
+          add.text = "+";
+          change.text = "~";
+        };
       };
 
       nvim-colorizer.enable = true;

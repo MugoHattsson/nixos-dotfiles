@@ -2,6 +2,7 @@
   imports = [
     ./comment.nix
     ./treesitter.nix
+    ./lsp.nix
   ];
 
   programs.nixvim = {
@@ -16,7 +17,10 @@
         };
       };
 
-      nvim-colorizer.enable = true;
+      nvim-colorizer = {
+        enable = true;
+        userDefaultOptions.names = false;
+      };
     };
   };
 }

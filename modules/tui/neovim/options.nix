@@ -3,7 +3,7 @@
     options = {
       relativenumber = true; # Relative line numbers
       number = true; # Display absolute line number of current line
-      hidden = true; # Keep closed buffer open in the background
+      # hidden = true; # Keep closed buffer open in the background
       mouse = "a"; # Enable mouse control
       splitbelow = true; # A new window is put below the current one
       splitright = true; # A new window is put to the right of the current one

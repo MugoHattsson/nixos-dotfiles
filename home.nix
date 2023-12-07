@@ -105,6 +105,7 @@
       enable = true;
       settings = {
         font_size = 13;
+        enable_audio_bell = "no";
       };
     };
 

@@ -3,6 +3,7 @@
     ./comment.nix
     ./treesitter.nix
     ./lsp.nix
+    ./python.nix
   ];
 
   programs.nixvim = {

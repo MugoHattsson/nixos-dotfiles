@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, inputs, ... }:
   let
       myAliases = {
         ga = "git add";
@@ -101,15 +101,32 @@
       enable = true;
     };
 
-    firefox = {
-      enable = true;
-    };
-
     kitty = {
       enable = true;
       settings = {
         font_size = 13;
       };
+    };
+
+    firefox = {
+      enable = true;
+
+      profiles.hugo = {
+        settings = {
+          "browser.download.autohideButton" = false;
+          "signon.rememberSignons" = false;
+          "extensions.pocket.enabled" = false;
+          "browser.toolbars.bookmarks.visibility" = "always";
+        };
+
+        extensions = with inputs.firefox-addons.packages."x86_64-linux"; [
+          consent-o-matic
+          videospeed
+          youtube-shorts-block
+        ];
+
+      };
+
     };
 
   };

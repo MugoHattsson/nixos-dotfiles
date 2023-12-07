@@ -15,9 +15,14 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    firefox-addons = {
+      url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
   };
 
-  outputs = { self, nixpkgs, home-manager, nixvim, ... }:  
+  outputs = { self, nixpkgs, home-manager, nixvim, ... }@inputs:  
     let
       lib = nixpkgs.lib;
       system = "x86_64-linux";
@@ -36,6 +41,7 @@
     homeConfigurations = {
       hugo = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
+        extraSpecialArgs = { inherit inputs; };
         modules = [ ./home.nix ] ++ homeManagerModules;
       };
     };

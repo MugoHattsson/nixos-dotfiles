@@ -107,12 +107,14 @@
     wget
     git
     kitty
-    spotify-player
+    spotify
     libreoffice
     killall
     tree
+    swaybg
 
     python3
+    pypy3
     virtualenv
   ];
 

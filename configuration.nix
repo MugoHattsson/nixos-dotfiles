@@ -112,6 +112,7 @@
     killall
     tree
     swaybg
+    obsidian
 
     python3
     pypy3

@@ -2,6 +2,6 @@
 
 {
   imports = [
-    ./waybar.nix
+    ./waybar
   ];
 }

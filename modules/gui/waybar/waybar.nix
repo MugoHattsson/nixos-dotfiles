@@ -3,6 +3,7 @@
 {
   programs.waybar = {
     enable = true;
+    style = ./style.css;
     settings = {
 
       mainBar = {
@@ -54,7 +55,6 @@
 
         
         "network" = {
-            # "interface": "wlp2*"; # (Optional) To force the use of this interface
           "format-wifi" = "{essid} ({signalStrength}%) ";
           "format-ethernet" = "{ipaddr}/{cidr} ";
           "tooltip-format" = "{ifname} via {gwaddr} ";

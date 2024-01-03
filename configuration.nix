@@ -100,6 +100,17 @@
     ];
   };
 
+  services.flatpak.enable = true;
+  programs.steam.enable = true;
+
+  xdg.portal = {
+    enable = true;
+    extraPortals = with pkgs; [
+      xdg-desktop-portal-gtk
+      xdg-desktop-portal-kde
+    ];
+  };
+
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
@@ -113,6 +124,10 @@
     tree
     swaybg
     obsidian
+    gnome.nautilus
+    transmission
+    vlc
+    tor-browser
 
     python3
     pypy3

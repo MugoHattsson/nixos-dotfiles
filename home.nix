@@ -109,6 +109,31 @@
       };
     };
 
+    wlogout = {
+      enable = true;
+
+      layout = [
+        {
+          label = "shutdown";
+          action = "systemctl poweroff";
+          text = "Power Off";
+          keybind = "p";
+        }
+        {
+          label = "reboot";
+          action = "systemctl reboot";
+          text = "Reboot";
+          keybind = "r";
+        }
+        {
+          label = "logout";
+          action = "loginctl terminate-user $USER";
+          text = "Logout";
+          keybind = "l";
+        }
+      ];
+    };
+
     thunderbird = {
       enable = true;
 

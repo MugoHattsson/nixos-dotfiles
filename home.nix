@@ -109,6 +109,14 @@
       };
     };
 
+    thunderbird = {
+      enable = true;
+
+      profiles.hugo = {
+        isDefault = true;
+      };
+    };
+
     firefox = {
       enable = true;
 

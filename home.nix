@@ -75,6 +75,40 @@
     ./modules/tui
   ];
 
+  home.pointerCursor = {
+      gtk.enable = true;
+      package = pkgs.graphite-cursors;
+      name = "graphite-light";
+      size = 16;
+  };
+
+  qt = {
+    enable = true;
+    platformTheme = "gtk";
+    style.package = pkgs.adwaita-qt;
+    style.name = "adwaita-dark";
+  };
+
+  gtk = {
+      enable = true;
+
+      cursorTheme = {
+        package = pkgs.graphite-cursors;
+        name = "graphite-light";
+      };
+
+      theme = {
+          package = pkgs.adw-gtk3;
+          name = "adw-gtk3-dark";
+      };
+
+      iconTheme = {
+          package = pkgs.gnome.adwaita-icon-theme;
+          name = "Adwaita";
+      };
+
+  };
+
   programs = {
     git = {
       enable = true;

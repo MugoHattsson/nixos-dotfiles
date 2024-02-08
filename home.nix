@@ -192,10 +192,12 @@
           "browser.toolbars.bookmarks.visibility" = "always";
         };
 
+        # nix flake show "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons" --all-systems | grep <extension_name>
         extensions = with inputs.firefox-addons.packages."x86_64-linux"; [
           consent-o-matic
           videospeed
           youtube-shorts-block
+          proton-pass
         ];
 
       };

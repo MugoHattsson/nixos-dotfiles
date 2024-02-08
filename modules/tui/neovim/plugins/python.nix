@@ -8,10 +8,10 @@
 
       settings = {
       #   line-length = 100;
-      #   per-file-ignores = {
-      #     # Ignore `F401` (unused import) in all `__init__.py` files
-      #     "__init__.py" = ["F401"];
-      #   };
+        per-file-ignores = {
+          # Ignore `F401` (unused import) in all `__init__.py` files
+          "__init__.py" = ["F401"];
+        };
       };
     };
 

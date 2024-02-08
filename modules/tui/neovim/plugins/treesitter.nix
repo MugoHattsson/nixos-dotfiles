@@ -20,6 +20,9 @@
         python
         rust
         c
+        sql
+        markdown
+        markdown_inline
       ];
     };
 

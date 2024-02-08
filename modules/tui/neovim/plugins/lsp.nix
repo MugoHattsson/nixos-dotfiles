@@ -10,13 +10,14 @@
           "<leader>lf" = "format";
           K = "hover";
           "<C-k>" = "signature_help";
+          "<leader>ca" = "code_action";
         };
       };
 
       servers = {
-        nixd = {
-          enable = true;
-        };
+        nixd.enable = true;
+
+        # marksman.enable = true; # Only available on unstable
       };
     };
 

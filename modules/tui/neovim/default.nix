@@ -1,5 +1,7 @@
+{ pkgs, ... }:
 {
   imports = [
+    ./autocommands.nix
     ./options.nix
     ./plugins
     ./keymappings.nix
@@ -7,8 +9,10 @@
 
   programs.nixvim = {
     enable = true;
-    defaultEditor = true; # not yet in stable TODO: Uncomment when on 23.11
+    defaultEditor = true;
     viAlias = true;
     vimAlias = true;
+
+    extraPackages = [ pkgs.ripgrep ];
   };
 }

@@ -111,9 +111,12 @@
     ];
   };
 
+  programs.java.enable = true;
+
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
+    xdg-utils
     vim
     wget
     git
@@ -128,10 +131,10 @@
     transmission
     vlc
     tor-browser
+    baobab
 
-    python3
-    pypy3
-    virtualenv
+    element-desktop
+    vscode
   ];
 
   # Some programs need SUID wrappers, can be configured further or are

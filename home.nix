@@ -5,6 +5,12 @@
         gcm = "git commit -m";
         gd = "git diff";
         gs = "git status";
+
+        ls = "eza";
+        l = "eza -l";
+        ll = "eza -l";
+        la = "eza -la";
+        lt = "eza --tree";
       };
   in
 {
@@ -38,7 +44,7 @@
     wev
   ];
 
-  xdg.configFile."hypr/hyprland.conf".source = ./hyprland.conf;
+  xdg.configFile."hypr/hyprland.conf".source = ./modules/hyprland.conf;
 
   xdg.userDirs = {
     enable = true;
@@ -135,6 +141,8 @@
         theme = "robbyrussell";
       };
     };
+
+    eza.enable = true;
 
     wofi = {
       enable = true;

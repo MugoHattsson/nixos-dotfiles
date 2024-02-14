@@ -9,21 +9,27 @@
       mainBar = {
         layer = "top";
         position = "bottom";
-        height = 33;
+        margin-top = 0;
+        margin-bottom = 2;
 
         modules-left = [ 
-          "hyprland/workspaces" 
           "hyprland/language" 
           "hyprland/submap" 
+          "tray"
         ];
-        modules-center = [ "hyprland/window" ];
+        modules-center = [ "hyprland/workspaces" ];
         modules-right = [ 
           "pulseaudio" 
           "network" 
           "battery" 
           "clock" 
-          "tray"
         ];
+
+        "hyprland/language" = {
+          "format" = "{}";
+          "format-en" = "us";
+          "format-sv" = "se";
+        };
 
         "tray" = {
           # "icon-size" = 21;
@@ -36,31 +42,34 @@
         };
 
         "battery" = {
-
           "states" = {
             "good" = 80;
             "warning" = 30;
             "critical" = 15;	    
           };
 
-          "format" = "{capacity}% {icon}";
-          "format-charging" = "{capacity}% ";
-          "format-plugged" = "{capacity}% ";
-          "format-alt" = "{time} {icon}";
+          "format" = "{icon} {capacity}%";
+          "format-charging" = " {capacity}%";
+          "format-plugged" = " {capacity}%";
+          "format-alt" = "{icon} {time}";
           # "format-good" = ""; # An empty format will hide the module
           # "format-full" = "";
           "format-icons" = [ "" "" "" "" "" ];
-
         };
 
 
         "network" = {
-          "format-wifi" = "{essid} ({signalStrength}%) ";
-          "format-ethernet" = "{ipaddr}/{cidr} ";
-          "tooltip-format" = "{ifname} via {gwaddr} ";
-          "format-linked" = "{ifname} (No IP) ";
+          "format-wifi" = " {signalStrength}%";
+          "format-ethernet" = " {ipaddr}/{cidr} ";
+          "tooltip-format" = "{essid} @ {ipaddr}";
+          "format-linked" = " {ifname} (No IP)";
           "format-disconnected" = "Disconnected ⚠";
           "format-alt" = "{ifname}: {ipaddr}/{cidr}";
+        };
+        
+        "pulseaudio" = {
+          "format" = " {volume}%";
+          "format-muted" = " {volume}%";
         };
 
       };

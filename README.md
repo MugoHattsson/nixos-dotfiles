@@ -3,7 +3,6 @@ This is my entire configuration for my laptop running NixOS
 # TODO
 ## Themeing
 - Colorscheme
-    - Waybar
     - Hyprland
     - Neovim
     - Wofi

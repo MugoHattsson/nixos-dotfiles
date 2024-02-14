@@ -17,7 +17,11 @@ This is my entire configuration for my laptop running NixOS
             sql-formatter!
             sqlfluff? (slow?)
 
+## Other
 - oh-my-posh
 
 - Firefox
     - bookmarks
+
+- wlogout
+    suspend

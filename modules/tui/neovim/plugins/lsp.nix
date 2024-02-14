@@ -1,6 +1,8 @@
 {
 
-    programs.nixvim.plugins.lsp = {
+  programs.nixvim.plugins = {
+
+    lsp = {
       enable = true;
 
       keymaps = {
@@ -21,4 +23,9 @@
       };
     };
 
+    lsp-lines = {
+      enable = true;
+      currentLine = true;
+    };
+  };
 }

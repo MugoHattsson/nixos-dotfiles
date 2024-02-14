@@ -32,6 +32,8 @@
         enable = true;
       };
 
+      rainbow-delimiters.enable = true;
+
       telescope = {
         enable = true;
         keymaps = {

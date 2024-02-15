@@ -7,6 +7,7 @@
 @define-color red #f38ba8;
 @define-color green #a6e3a1;
 @define-color yellow #f9e2af;
+@define-color orange #fab387;
 
 * {
     /* `otf-font-awesome` is required to be installed for icons */
@@ -62,8 +63,8 @@ button:hover {
 }
 
 #workspaces button.active {
-    color: @textcolor;
-    background: @overlay1;
+    color: @backgroundcolor;
+    background: @orange;
     border-radius: 15px;
     min-width: 40px;
     transition: all 0.3s ease-in-out;

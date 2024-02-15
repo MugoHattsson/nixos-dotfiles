@@ -16,6 +16,7 @@
 	  {
 	    "<Space>" = "<NOP>";
 	    "<esc>" = ":noh<CR>"; # Esc to clear search results
+      "<leader>lg" = ":LazyGit<CR>";
 
 	    # Navigate windows
 	    "<C-h>" = "<C-w>h";

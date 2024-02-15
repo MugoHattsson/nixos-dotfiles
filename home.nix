@@ -11,6 +11,8 @@
         ll = "eza -l";
         la = "eza -la";
         lt = "eza --tree";
+        tree = "eza --tree";
+
         ncdu = "ncdu --color dark";
       };
   in

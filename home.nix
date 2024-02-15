@@ -7,7 +7,7 @@
         gs = "git status";
 
         ls = "eza";
-        l = "eza -l";
+        l = "eza -1";
         ll = "eza -l";
         la = "eza -la";
         lt = "eza --tree";

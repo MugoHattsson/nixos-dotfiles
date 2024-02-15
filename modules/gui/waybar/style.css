@@ -98,6 +98,7 @@ button:hover {
 #custom-media,
 #language,
 #tray,
+#submap,
 #mode,
 #idle_inhibitor,
 #scratchpad,
@@ -114,6 +115,11 @@ button:hover {
 #window,
 #workspaces {
     margin: 0 4px;
+}
+
+#submap {
+    background-color: @red;
+    color: #000000;
 }
 
 .modules-left,

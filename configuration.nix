@@ -119,6 +119,7 @@
     # System utilities
     swaybg
     xdg-utils
+    grimblast     # hyprland screenshot utility
 
     # Terminal programs
     git

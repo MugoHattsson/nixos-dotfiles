@@ -116,24 +116,28 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
+    # System utilities
+    swaybg
     xdg-utils
-    vim
-    wget
+
+    # Terminal programs
     git
     kitty
-    spotify
-    libreoffice
     killall
     tree
-    swaybg
-    obsidian
+    vim
+    wget
+
+    # Graphical programs
+    baobab
+    element-desktop
     gnome.nautilus
+    libreoffice
+    obsidian
+    spotify
+    tor-browser
     transmission
     vlc
-    tor-browser
-    baobab
-
-    element-desktop
     vscode
   ];
 

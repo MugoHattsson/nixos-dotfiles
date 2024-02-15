@@ -119,9 +119,11 @@
     # System utilities
     swaybg
     xdg-utils
+    wl-clipboard
     grimblast     # hyprland screenshot utility
 
     # Terminal programs
+    fd    # replacement for the 'find' command
     git
     kitty
     killall

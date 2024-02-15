@@ -149,6 +149,12 @@
     };
 
     eza.enable = true;
+    zoxide.enable = true; # cd replacement
+    fzf.enable = true; # fuzzy file finder, integrates with zoxide etc.
+
+    bat = {
+      enable = true;
+    };
 
     btop = {
       enable = true;

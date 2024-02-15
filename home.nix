@@ -47,7 +47,10 @@
     wev
   ];
 
-  xdg.configFile."hypr/hyprland.conf".source = ./modules/hyprland.conf;
+  xdg.configFile = {
+    "hypr/hyprland.conf".source = ./modules/hyprland.conf;
+    "btop".source = ./resources/btop;
+  };
 
   xdg.userDirs = {
     enable = true;
@@ -146,6 +149,11 @@
     };
 
     eza.enable = true;
+
+    btop = {
+      enable = true;
+      settings.theme = "/home/hugo/.config/btop/themes/catppuccin_mocha.theme";
+    };
 
     wofi = {
       enable = true;

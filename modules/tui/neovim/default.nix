@@ -1,4 +1,3 @@
-{ pkgs, ... }:
 {
   imports = [
     ./autocommands.nix
@@ -12,7 +11,5 @@
     defaultEditor = true;
     viAlias = true;
     vimAlias = true;
-
-    extraPackages = [ pkgs.ripgrep ];
   };
 }

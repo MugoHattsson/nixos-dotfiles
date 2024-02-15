@@ -2,9 +2,10 @@
 {
   imports = [
     ./comment.nix
-    ./treesitter.nix
     ./lsp.nix
     ./python.nix
+    ./telescope.nix
+    ./treesitter.nix
   ];
 
   programs.nixvim = {
@@ -33,15 +34,6 @@
       };
 
       rainbow-delimiters.enable = true;
-
-      telescope = {
-        enable = true;
-        keymaps = {
-          "<leader>ff" = "find_files";
-          "<leader>fg" = "live_grep";
-          "<leader>fb" = "buffers";
-        };
-      };
 
       which-key.enable = true;
 

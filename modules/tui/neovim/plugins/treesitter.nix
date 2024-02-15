@@ -23,6 +23,7 @@
         sql
         markdown
         markdown_inline
+        css
       ];
     };
 

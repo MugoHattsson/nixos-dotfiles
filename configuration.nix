@@ -125,11 +125,11 @@
     kitty
     killall
     tree
+    ncdu    # NCurses Disk Usage, terminal replacement for baobab
     vim
     wget
 
     # Graphical programs
-    baobab
     element-desktop
     gnome.nautilus
     libreoffice

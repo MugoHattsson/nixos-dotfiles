@@ -27,8 +27,8 @@
 
         "hyprland/language" = {
           "format" = "{}";
-          "format-en" = "us";
-          "format-sv" = "se";
+          "format-en" = "US";
+          "format-sv" = "SE";
         };
 
         "tray" = {

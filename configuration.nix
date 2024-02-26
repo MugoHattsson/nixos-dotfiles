@@ -117,10 +117,11 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     # System utilities
-    swaybg
-    xdg-utils
-    wl-clipboard
     grimblast     # hyprland screenshot utility
+    swaybg
+    sshpass
+    wl-clipboard
+    xdg-utils
 
     # Terminal programs
     fd    # replacement for the 'find' command

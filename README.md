@@ -9,6 +9,7 @@ This is my entire configuration for my laptop running NixOS
     - wlogout
 
 ## Modules
+- lock
 - Neovim
     - Plugins
         - Which-key
@@ -17,10 +18,8 @@ This is my entire configuration for my laptop running NixOS
             sqlfluff? (slow?)
 
 ## Other
-- oh-my-posh
+- terminal prompt
+    - oh-my-posh
 
 - Firefox
     - bookmarks
-
-- wlogout
-    suspend

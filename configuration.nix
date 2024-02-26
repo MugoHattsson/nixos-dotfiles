@@ -51,6 +51,16 @@
     xkbVariant = "";
   };
 
+  hardware.opengl = {
+    enable = true;
+    extraPackages = with pkgs; [
+      intel-media-driver
+      intel-vaapi-driver
+      vaapiVdpau
+      libvdpau-va-gl
+    ];
+  };
+
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.hugo = {
     isNormalUser = true;
@@ -89,6 +99,13 @@
     pulse.enable = true;
     # If you want to use JACK applications, uncomment this
     #jack.enable = true;
+  };
+
+  services.tlp = {
+    enable = true;
+    settings = {
+      DEVICES_TO_DISABLE_ON_STARTUP="bluetooth";
+    };
   };
 
   programs.light.enable = true;

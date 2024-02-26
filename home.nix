@@ -237,6 +237,18 @@
 
     };
 
+    ssh = {
+      enable = true;
+      extraConfig = 
+      ''
+      host remarkable
+          Hostname 10.11.99.1
+          User root
+          Port 22
+          HostkeyAlgorithms +ssh-rsa
+      '';
+    };
+
   };
 
   # Let Home Manager install and manage itself.

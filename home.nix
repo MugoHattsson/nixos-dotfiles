@@ -9,7 +9,7 @@
         ls = "eza";
         l = "eza -1";
         ll = "eza -l";
-        la = "eza -la";
+        la = "eza -laa";
         lt = "eza --tree";
         tree = "eza --tree";
 

@@ -146,6 +146,7 @@
     kitty
     killall
     ncdu    # NCurses Disk Usage, terminal replacement for baobab
+    tldr
     vim
     wget
 

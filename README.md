@@ -23,3 +23,5 @@ This is my entire configuration for my laptop running NixOS
 
 - Firefox
     - bookmarks
+
+- Notifications with Mako

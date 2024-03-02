@@ -118,7 +118,6 @@
   };
 
   services.flatpak.enable = true;
-  programs.steam.enable = true;
 
   xdg.portal = {
     enable = true;
@@ -146,7 +145,7 @@
     kitty
     killall
     ncdu    # NCurses Disk Usage, terminal replacement for baobab
-    tldr
+    tealdeer
     vim
     wget
 

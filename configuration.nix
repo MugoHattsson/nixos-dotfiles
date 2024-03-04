@@ -13,6 +13,7 @@
   # Bootloader.
   boot.loader = {
     efi.canTouchEfiVariables = true;
+    timeout = 3;
 
     grub = {
       efiSupport = true;

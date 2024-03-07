@@ -131,6 +131,9 @@
       enable = true;
       userName = "MugoHattsson";
       userEmail = "hu5174ma-s@student.lu.se";
+      extraConfig = {
+        pull.rebase = true;
+      };
     };
 
     lazygit.enable = true;

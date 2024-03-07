@@ -23,3 +23,9 @@ This is my entire configuration for my laptop running NixOS
     - bookmarks
 
 - Notifications with Mako
+
+- sd: Script Directory
+    - rebuild
+    - home-manager switch
+    - update
+

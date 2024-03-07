@@ -133,6 +133,8 @@
       userEmail = "hu5174ma-s@student.lu.se";
     };
 
+    lazygit.enable = true;
+
     bash = {
       enable = true;
       shellAliases = myAliases;

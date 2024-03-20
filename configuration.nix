@@ -122,6 +122,10 @@
     ];
   };
 
+  # services.devmon.enable = true;
+  services.gvfs.enable = true;
+  # services.udisks2.enable = true;
+
   services.flatpak.enable = true;
 
   xdg.portal = {

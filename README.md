@@ -25,7 +25,13 @@ This is my entire configuration for my laptop running NixOS
 - Notifications with Mako
 
 - sd: Script Directory
-    - rebuild
-    - home-manager switch
-    - update
+    - nix
+        - update
+        - rebuild switch
+        - delete old generations
+        - garbage collect
+    - home-manager
+        - switch
+        - delete old generations
+        - garbage collect
 

@@ -19,6 +19,7 @@
         ];
         modules-center = [ "hyprland/workspaces" ];
         modules-right = [ 
+          "bluetooth"
           "pulseaudio" 
           "network" 
           "battery" 
@@ -70,6 +71,10 @@
         "pulseaudio" = {
           "format" = " {volume}%";
           "format-muted" = " {volume}%";
+        };
+
+        "bluetooth" = {
+          "on-click" = "blueman-manager";
         };
 
       };

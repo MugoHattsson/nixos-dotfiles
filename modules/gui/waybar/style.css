@@ -8,6 +8,7 @@
 @define-color green #a6e3a1;
 @define-color yellow #f9e2af;
 @define-color orange #fab387;
+@define-color blue #89b4fa;
 
 * {
     /* `otf-font-awesome` is required to be installed for icons */
@@ -90,6 +91,7 @@ button:hover {
 #battery,
 #cpu,
 #network,
+#bluetooth,
 #pulseaudio,
 #wireplumber,
 #custom-media,
@@ -166,6 +168,16 @@ label:focus {
 
 #pulseaudio.muted {
     background-color: @yellow;
+    color: @backgroundcolor;
+}
+
+#bluetooth.on {
+    background-color: @blue;
+    color: @backgroundcolor;
+}
+
+#bluetooth.connected {
+    background-color: @green;
     color: @backgroundcolor;
 }
 

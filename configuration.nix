@@ -113,6 +113,9 @@
     };
   };
 
+  hardware.bluetooth.enable = true;
+  services.blueman.enable = true;
+
   programs.light.enable = true;
   services.actkbd = {
     enable = true;

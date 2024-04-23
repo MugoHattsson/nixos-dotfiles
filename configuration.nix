@@ -166,6 +166,7 @@
     gnome.nautilus
     libreoffice
     obsidian
+    prusa-slicer
     spotify
     tor-browser
     transmission

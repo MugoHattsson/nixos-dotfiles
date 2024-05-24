@@ -236,6 +236,7 @@
           youtube-shorts-block
           proton-pass
           duckduckgo-privacy-essentials
+          sponsorblock
         ];
 
       };

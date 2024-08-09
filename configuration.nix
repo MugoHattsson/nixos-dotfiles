@@ -47,12 +47,12 @@
 
   # TODO update this according to 23.11
   # Configure keymap in X11
-  services.xserver = {
+  services.xserver.xkb = {
     layout = "us";
-    xkbVariant = "";
+    variant = "";
   };
 
-  hardware.opengl = {
+  hardware.graphics = {
     enable = true;
     extraPackages = with pkgs; [
       intel-media-driver
@@ -163,13 +163,13 @@
 
     # Graphical programs
     element-desktop
-    gnome.nautilus
+    nautilus
     libreoffice
     obsidian
     prusa-slicer
     spotify
     tor-browser
-    transmission
+    transmission_3
     vlc
     vscode
   ];

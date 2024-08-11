@@ -32,9 +32,14 @@
     in
   {
     nixosConfigurations = {
-      nixos = lib.nixosSystem {
+      laptop = lib.nixosSystem {
         inherit system;
-        modules = [ ./configuration.nix ];
+        modules = [ ./configurations/laptop_config.nix ];
+      };
+
+      desktop = lib.nixosSystem {
+        inherit system;
+        modules = [ ./configurations/desktop_config.nix ];
       };
     };
 

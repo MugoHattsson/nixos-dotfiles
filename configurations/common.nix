@@ -79,14 +79,6 @@
 
   services.flatpak.enable = true;
 
-  xdg.portal = {
-    enable = true;
-    extraPortals = with pkgs; [
-      xdg-desktop-portal-gtk
-      xdg-desktop-portal-kde
-    ];
-  };
-
   programs.java.enable = true;
 
   # List packages installed in system profile. To search, run:

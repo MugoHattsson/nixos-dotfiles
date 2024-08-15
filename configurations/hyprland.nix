@@ -16,6 +16,14 @@
     };
   };
 
+  xdg.portal = {
+    enable = true;
+    extraPortals = with pkgs; [
+      xdg-desktop-portal-gtk
+      xdg-desktop-portal-kde
+    ];
+  };
+
   services.gvfs.enable = true; # automatically mount usb disks
 
   hardware.bluetooth.enable = true;

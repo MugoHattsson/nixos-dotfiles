@@ -99,6 +99,7 @@
     wget
 
     # Graphical programs
+    discord
     element-desktop
     nautilus
     libreoffice

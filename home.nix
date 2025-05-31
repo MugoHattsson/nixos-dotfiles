@@ -35,7 +35,7 @@
   # environment.
   home.packages = with pkgs; [
     font-awesome
-    (pkgs.nerdfonts.override { fonts = [ "NerdFontsSymbolsOnly" ]; })
+    # (pkgs.nerd-fonts.override { fonts = [ "NerdFontsSymbolsOnly" ]; })
 
     # # You can also create simple shell scripts directly inside your
     # # configuration. For example, this adds a command 'my-hello' to your

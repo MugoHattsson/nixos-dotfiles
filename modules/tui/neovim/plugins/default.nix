@@ -3,7 +3,7 @@
   imports = [
     ./comment.nix
     ./lsp.nix
-    ./python.nix
+    # ./python.nix
     ./telescope.nix
     ./treesitter.nix
   ];

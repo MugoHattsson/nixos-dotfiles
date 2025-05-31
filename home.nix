@@ -101,7 +101,7 @@
 
   qt = {
     enable = true;
-    platformTheme = "gtk";
+    platformTheme.name = "gtk";
     style.package = pkgs.adwaita-qt;
     style.name = "adwaita-dark";
   };
@@ -120,7 +120,7 @@
       };
 
       iconTheme = {
-          package = pkgs.gnome.adwaita-icon-theme;
+          package = pkgs.adwaita-icon-theme;
           name = "Adwaita";
       };
 
@@ -141,6 +141,13 @@
     bash = {
       enable = true;
       shellAliases = myAliases;
+    };
+
+    direnv = {
+      enable = true;
+      enableZshIntegration = true;
+      nix-direnv.enable = true;
+
     };
 
     zsh = {

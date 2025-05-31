@@ -135,7 +135,7 @@
     enable = true;
     extraPortals = with pkgs; [
       xdg-desktop-portal-gtk
-      xdg-desktop-portal-kde
+      kdePackages.xdg-desktop-portal-kde
     ];
   };
 
@@ -145,24 +145,38 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     # System utilities
+    graphviz
     grimblast     # hyprland screenshot utility
     swaybg
     sshpass
     wl-clipboard
     xdg-utils
+    man-pages     # Needed to view linux syscall man-pages
+
+    # Efficient C
+    gcc
+    gdb
+    gnumake
+    oprofile
+    valgrind
+
 
     # Terminal programs
+    conda
     fd    # replacement for the 'find' command
     git
     kitty
     killall
     ncdu    # NCurses Disk Usage, terminal replacement for baobab
     tealdeer
+    unzip
     vim
     wget
 
     # Graphical programs
+    discord
     element-desktop
+    handbrake
     nautilus
     libreoffice
     obsidian
@@ -172,6 +186,7 @@
     transmission_3
     vlc
     vscode
+    zoom-us
   ];
 
   # Some programs need SUID wrappers, can be configured further or are

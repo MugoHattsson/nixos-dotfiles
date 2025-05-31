@@ -1,6 +1,6 @@
 {
   programs.nixvim = {
-    options = {
+    opts = {
       relativenumber = true; # Relative line numbers
       number = true; # Display absolute line number of current line
       # hidden = true; # Keep closed buffer open in the background

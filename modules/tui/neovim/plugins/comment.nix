@@ -1,8 +1,10 @@
 {
-  programs.nixvim.plugins.comment-nvim = {
+  programs.nixvim.plugins.comment = {
     enable = true;
-    
-    toggler.line = "<leader>/";
-    opleader.line = "<leader>/";
+
+    settings = {
+      toggler.line = "<leader>/";
+      opleader.line = "<leader>/";
+    };
   };
 }

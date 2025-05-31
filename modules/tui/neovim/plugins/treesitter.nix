@@ -12,7 +12,7 @@
       nixvimInjections = true;
 
       # folding = true; # Enable hiding lines by folding them away. command: zf, zo, zc
-      indent = true;
+      settings.indent.enable = true;
 
       grammarPackages = with grammars; [
         lua

@@ -25,7 +25,7 @@
 
     lsp-lines = {
       enable = true;
-      currentLine = true;
+      # currentLine = true;
     };
   };
 }

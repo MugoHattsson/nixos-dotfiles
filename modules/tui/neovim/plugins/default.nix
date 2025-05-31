@@ -11,13 +11,13 @@
   programs.nixvim = {
     colorschemes.catppuccin = {
       enable = true;
-      flavour = "mocha";
+      settings.flavour = "mocha";
     };
 
     plugins = {
       gitsigns = {
         enable = true;
-        signs = {
+        settings.signs = {
           add.text = "+";
           change.text = "~";
         };

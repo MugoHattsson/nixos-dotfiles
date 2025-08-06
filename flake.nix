@@ -1,7 +1,4 @@
 {
-
-  description = "My first flake";
-
   inputs = {
     nixpkgs.url = "nixpkgs/nixos-unstable";
 
@@ -22,7 +19,7 @@
 
   };
 
-  outputs = { self, nixpkgs, home-manager, nixvim, ... }@inputs:  
+  outputs = inputs@{ self, nixpkgs, home-manager, nixvim, ... }:  
     let
       lib = nixpkgs.lib;
       system = "x86_64-linux";
@@ -34,16 +31,37 @@
     nixosConfigurations = {
       nixos = lib.nixosSystem {
         inherit system;
-        modules = [ ./configuration.nix ];
+        modules = [
+          ./machines/common.nix
+          ./machines/laptop
+        ];
       };
+      #
+      # fog = nixpkgs.lib.nixosSystem {
+      #   modules = [ 
+      #     ./machines/fog
+      #   ];
+      # };
     };
 
     homeConfigurations = {
-      hugo = home-manager.lib.homeManagerConfiguration {
+      "hugo@nixos" = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
         extraSpecialArgs = { inherit inputs; };
-        modules = [ ./home.nix ] ++ homeManagerModules;
+        modules = [
+          ./home.nix
+          ./machines/laptop/laptop-home.nix
+        ] ++ homeManagerModules;
       };
+      #
+      # "hugo@fog" = home-manager.lib.homeManagerConfiguration {
+      #   inherit pkgs;
+      #   extraSpecialArgs = { inherit inputs; };
+      #   modules = [
+      #     ./home.nix
+      #     ./machines/fog/fog-home.nix
+      #   ] ++ homeManagerModules;
+      # };
     };
   };
 

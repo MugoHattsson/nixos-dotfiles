@@ -5,6 +5,7 @@
     [ # Include the results of the hardware scan.
 			./disks.nix
       ./hardware-configuration.nix
+      ./homepage.nix
 			./samba.nix
 			./jellyfin.nix
     ];

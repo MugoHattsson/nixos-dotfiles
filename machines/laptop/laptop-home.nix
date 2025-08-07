@@ -1,7 +1,6 @@
 { config, pkgs, inputs, ... }:
 
 {
-
   imports = [ 
     ../../modules/gui
   ];
@@ -94,6 +93,37 @@
           sponsorblock
         ];
       };
+    };
+
+    wlogout = {
+      enable = true;
+
+      layout = [
+        {
+          label = "shutdown";
+          action = "systemctl poweroff";
+          text = "Power Off";
+          keybind = "p";
+        }
+        {
+          label = "reboot";
+          action = "systemctl reboot";
+          text = "Reboot";
+          keybind = "r";
+        }
+        {
+          label = "hibernate";
+          action = "systemctl hibernate";
+          text = "Hibernate";
+          keybind = "h";
+        }
+        {
+          label = "logout";
+          action = "loginctl terminate-user $USER";
+          text = "Logout";
+          keybind = "l";
+        }
+      ];
     };
   };
 }

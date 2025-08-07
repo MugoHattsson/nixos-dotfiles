@@ -36,12 +36,13 @@
           ./machines/laptop
         ];
       };
-      #
-      # fog = nixpkgs.lib.nixosSystem {
-      #   modules = [ 
-      #     ./machines/fog
-      #   ];
-      # };
+      
+      fog = nixpkgs.lib.nixosSystem {
+        modules = [ 
+          ./machines/common.nix
+          ./machines/fog
+        ];
+      };
     };
 
     homeConfigurations = {
@@ -53,15 +54,15 @@
           ./machines/laptop/laptop-home.nix
         ] ++ homeManagerModules;
       };
-      #
-      # "hugo@fog" = home-manager.lib.homeManagerConfiguration {
-      #   inherit pkgs;
-      #   extraSpecialArgs = { inherit inputs; };
-      #   modules = [
-      #     ./home.nix
-      #     ./machines/fog/fog-home.nix
-      #   ] ++ homeManagerModules;
-      # };
+ 
+      "hugo@fog" = home-manager.lib.homeManagerConfiguration {
+        inherit pkgs;
+        extraSpecialArgs = { inherit inputs; };
+        modules = [
+          ./home.nix
+          ./machines/fog/fog-home.nix
+        ] ++ homeManagerModules;
+      };
     };
   };
 
